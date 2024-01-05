@@ -1,0 +1,396 @@
+:root{
+    --mainBodyC:rgba(255,157,200,255);
+    --feetC: rgba(241,1,121,255);
+    --blushesC:rgba(229,100,156,255);
+    --eyesC:rgba(5,100,199,255);
+    --shadowC:rgba(203,145,178,255);
+    --details: rgba(0,0,0,255);
+    --eyeDetail: rgb(255,255,255,255);
+
+}
+
+@keyframes backgroundChange{
+    0%{background-image: url(../imgKerbyAni/sun.jpg);}
+    100%{background-image: url(../imgKerbyAni/sky.jpg);}
+}
+@keyframes mouthChange{
+    0%{}
+    100%{width: 10rem; height: 12rem;border-radius: 100%; left:27rem}
+}
+@keyframes eybrowrL{
+    0%{}
+    100%{top: 2rem;}
+}
+@keyframes eybrowR{
+    0%{}
+    100%{top: 1.4rem;}
+}
+@keyframes blushesChange{
+    0%{}
+    100%{background-color: white}
+}
+@keyframes resizeBody{
+    0%{ top:0rem}
+    25%{ background-color: rgba(222,25,111,1);top:5rem }
+    50%{background-color:rgba(222,51,126,1);top:0rem}
+    75%{background-color:rgba(238,83,151,1);top:5rem;}
+    100%{background-color:rgba(241,121,174,1);top: 0rem;left:6rem; }
+    
+}
+@keyframes disAp{
+    100%{display:none;}
+}
+@keyframes sunDisap{
+    0%{background-color: rgba(222,140,51,0.958420868347339);}
+    10%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 34%, rgba(255,221,67,0.9248074229691877) 67%, rgba(17,16,8,1) 94%);}
+    20%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 31%, rgba(255,221,67,0.9248074229691877) 65%, rgba(17,16,8,1) 89%)}
+    30%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 28%, rgba(255,221,67,0.9248074229691877) 60%, rgba(17,16,8,1) 86%)}
+    40%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 25%, rgba(255,221,67,0.9248074229691877) 55%, rgba(17,16,8,1) 83%)}
+    50%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 22%, rgba(255,221,67,0.9248074229691877) 50%, rgba(17,16,8,1) 80%)}
+    60%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339)19%, rgba(255,221,67,0.9248074229691877) 45%, rgba(17,16,8,1) 75%)}
+    70%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 14%, rgba(255,221,67,0.9248074229691877) 40%, rgba(17,16,8,1) 65%)}
+    80%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 10%, rgba(255,221,67,0.9248074229691877) 33%, rgba(17,16,8,1) 55%)}
+    90%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339)5%, rgba(255,221,67,0.9248074229691877) 25%, rgba(17,16,8,1) 50%)}
+    100%{background: linear-gradient(90deg, rgba(222,140,51,0.958420868347339) 0%, rgba(255,221,67,0.9248074229691877) 0%, rgba(17,16,8,1) 0%);}
+}
+@keyframes rotateLeft{
+    100%{transform: rotate(360deg);}
+}
+@keyframes rotateRight{
+    100%{transform: rotate(-360deg);}
+}
+@keyframes heandLoose{
+    100%{background-color: white}
+}
+@keyframes leftFoChange{
+    0%{top:31rem;left:2rem}
+    50%{top:31rem;left:12rem}
+    100%{left:2rem;background-color: white}
+}
+@keyframes rightFoChange{
+    0%{top:31rem;left:32rem}
+    50%{top:31rem;left:22rem}
+    100%{left:32rem;background-color: white}
+}
+
+
+
+body{
+    background-image: url(../imgKerbyAni/sun.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: backgroundChange;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    
+}
+
+
+.mainBody{
+    background-color: var(--mainBodyC);
+    width: 50rem;
+    height: 40rem;
+    border: 25px var(--details) solid;
+    border-radius: 50%;
+    position: relative;
+    left: 25rem;
+    
+    animation: resizeBody;
+    animation-duration: 6.5s;
+    animation-fill-mode: forwards;
+   
+
+}
+
+
+
+.leftHeand{
+    background-color:var(--mainBodyC);
+    width: 10rem;
+    height: 13rem;
+    border: 25px  var(--details) solid;
+    border-right: 0;
+    border-radius: 50% 0 0 50%;
+    position: relative;
+    right: 8rem;
+    top: 17rem;
+    transform: rotate(-15deg);
+    z-index: -1;
+    animation: heandLoose;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+
+   
+}
+.rightHeand{
+    background-color:var(--mainBodyC);
+    width: 10rem;
+    height: 13rem;
+    border: 25px  var(--details) solid;
+    border-left: 0;
+    border-radius: 15% 85% 85% 15%;
+    z-index: -1;
+    position: absolute; 
+    top: 16.5rem;
+    left: 45rem;
+    transform: rotate(25deg);  
+    animation: heandLoose;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+
+.leftFoot{
+    background-color:var(--feetC);
+    width: 15rem;
+    height: 10rem;
+    border: 25px   var(--details) solid;
+    border-radius: 90% 15% 40% 15%;
+    z-index: -1;
+    position: absolute; 
+    top: 29rem;
+    animation: leftFoChange;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    
+    
+}
+.rightFoot{
+    background-color:var(--feetC);
+    width: 15rem;
+    height: 10rem;
+    border: 25px   var(--details) solid;
+    border-radius: 15% 90% 15% 40%;
+    z-index: -1;
+    position: absolute; 
+    top: 29rem;
+    left: 32rem;
+    transform: rotate(-1deg);
+    animation: rightFoChange;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    
+}
+
+
+.leftBlush{
+    background-color:var(--blushesC);
+    width: 8rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 18rem;
+    left: 16rem;
+    transform: rotate(-5deg);
+    animation:blushesChange;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.rightBlush{
+    background-color:var(--blushesC);
+    width: 7rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 16rem;
+    left: 40rem; 
+    transform: rotate(-12deg);
+    animation:blushesChange;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+.shadow{
+    background-color:var(--shadowC);
+    width: 60rem;
+    height: 5rem;
+    border-radius: 50%;
+    z-index: -2;
+    position: relative; 
+    bottom: 2rem;
+    left: 22rem;
+    display: none;
+    animation: disAp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+}
+
+
+.leftEye{
+    background-color:var(--details);
+    width: 5rem;
+    height: 11rem;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 8rem;
+    left: 24rem;
+    transform: rotate(-10deg); 
+    animation: rotateLeft;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    
+    
+}.bluPL{
+    background-color:var(--eyesC);
+    width: 4rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-1deg);
+    left: 0.5rem;  
+    animation: rotateLeft;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    
+
+
+}.blackPL{
+    background-color:var(--details);
+    width: 4rem;
+    height: 9rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-1deg);
+    left: 0.5rem;  
+    animation: rotateLeft;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}.whitePL{
+    background-color:var(--eyeDetail);
+    width: 3rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-1deg);
+    left: 1rem; 
+    top: 0.5rem; 
+    animation: rotateLeft;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.rightEye{
+    background-color:var(--details);
+    width: 5rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 7rem;
+    left: 33rem; 
+    transform: rotate(-10deg);
+    animation: rotateRight;
+    animation-duration: 5s;
+    animation-delay: 3s; 
+    animation-fill-mode: forwards;
+}.bluPR{
+    background-color:var(--eyesC);
+    width: 4rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-1deg);
+    left: 0.5rem; 
+    animation: rotateRight;
+    animation-duration: 5s;
+    animation-delay: 3s; 
+    animation-fill-mode: forwards; 
+}.blackPR{
+    background-color:var(--details);
+    width: 4rem;
+    height: 9rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-1deg);
+    left: 0.5rem;
+    animation: rotateRight;
+    animation-duration: 5s;
+    animation-delay: 3s;   
+    animation-fill-mode: forwards;
+}.whitePR{
+    background-color:var(--eyeDetail);
+    width: 3rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-1deg);
+    left: 1rem; 
+    top: 0.5rem; 
+    animation: rotateRight;
+    animation-duration: 5s;
+    animation-delay: 3s; 
+    animation-fill-mode: forwards;
+}
+.eyeBrowR{
+    background-color:var(--details);
+    width: 7rem;
+    height: 1.2rem;
+    border: 5px var(--details);
+    border-radius: 20%;
+    position: absolute;
+    top: 7rem;
+    left: 31rem;
+    z-index: 4;
+    transform: rotate(-40deg);
+    animation:  eybrowR;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    
+}
+.eyeBrowL{
+    background-color:var(--details);
+    width: 7rem;
+    height: 1.2rem;
+    border: 5px var(--details);
+    border-radius: 20%;
+    position: absolute;
+    top: 8.1rem;
+    left: 22.5rem; 
+    transform: rotate(25deg);  
+    z-index: 4;
+    animation:  eybrowrL;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.mouth{
+    background-color:var(--details);
+    width: 5rem;
+    height: 1.2rem;
+    border: 5px dashed var(--details);
+    border-radius: 50% 50% 0 0;
+    position: absolute; 
+    top: 21rem;
+    left: 31rem;
+    transform: rotate(-10deg);
+    animation: mouthChange;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.sun{
+    background-color:yellow;
+    width: 20rem;
+    height:20rem;
+    border: 5px black ;
+    border-radius: 50% ;
+    position: absolute; 
+    top: 1rem;
+    right: 1rem;
+    animation: sunDisap;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
